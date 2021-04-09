@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+}
+h1{color: white;
+text-align: center;
+text-decoration: burlywood;
+}
+div{
+    color: coral;
+    float: left;
+    width: 30%;
+    height: 400;
+}
+.first{
+    color: cyan;
+}
+img{
+    width: 100%;
+}

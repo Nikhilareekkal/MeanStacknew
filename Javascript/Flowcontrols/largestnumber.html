@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>largest number</title>
+    <style>
+        body{
+            background-color: rgb(2, 65, 73);
+        }
+        .form{
+            display: flex;
+            margin: 0;
+            padding: 100px 0;
+            justify-content: center;
+        }
+        h1{
+            color: rgb(243, 250, 145);
+            font-size: 50px;
+            font-weight: bold;
+            font-family: cursive;
+        }
+        .input{
+            margin: 1rem 0;
+        }
+        input{
+            padding: 1.5rem;
+            width: 100%;
+            border-radius: 10px;
+        }
+        button{
+            padding: 1rem;
+            margin: 0 42%;
+            background-color: darkblue;
+            border: none;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <form>
+            <h1>Lets find the largest number</h1>
+            <div class="input"><input type="text" id="a" placeholder="Enter first number"></div>
+            <div class="input"><input type="text" id="b" placeholder="Enter second number"></div>
+            <div class="input"><input type="text" id="c" placeholder="Enter third number"></div>
+            <div class="input"><input type="text" id="d"></div>
+            <button onclick="fun()">Get the Aswer</button>
+        </form>
+    </div>
+    <script>
+    function fun()
+    {
+        var a=document.getElementById("a").innerHTML;
+        var b=document.getElementById("b").innerHTML;
+        var c=document.getElementById("c").innerHTML;
+
+        if( a==b && b==c && c==a)
+            document.getElementById("d").Value = "All numbers are equal";
+            else if( a>b && a>c)
+                document.getElementById("d").Value = a+" is largest number";
+                else if(b>c)
+                    document.getElementById("d").Value = b+" is the largest number";
+                    else
+                        document.getElementById("d").Value = b+" is the largest number";
+    }
+    </script>
+</body>
+</html>
