@@ -1,0 +1,102 @@
+
+@import url('http://googleapi.com/css?family=poppins:400,500,700')
+
+body{
+    background-color: rgb(250, 248, 250);
+}
+.main{
+    align-items: center;
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    background-color: rgb(250, 248, 250);
+}
+
+.text{
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+.iphone4{
+    height: 620px;
+    width: 400px;
+    opacity: 1;
+    margin-left: 180px;
+}
+
+.mainbox{
+    margin-left: 200px;
+    margin-top: 2rem;
+    height: 600px;
+    width: 350px;
+    
+}
+.box{
+    box-shadow: 0 0 1px ;
+    padding: 1rem 3rem;
+    background-color: white;
+}
+.signup{
+    margin-top: 1rem;
+    box-shadow: 0 0 2px;
+    padding: 1.5rem 0rem;
+    text-align: center;
+    background-color: white;
+}
+.fb{
+    text-align: center;
+}
+.fgt{
+    text-align: center;
+}
+hr{
+    z-index: -1;
+}
+.or{
+    position: absolute;
+    padding: 0 .5rem;
+    top: 320px;
+    left: 937px;
+    background-color: white;
+    text-align: center;
+    align-self: center;
+}
+.app2{
+    width: 100%;
+    margin-left: 47px;
+}
+.play2{
+    width: 60.5%;
+    margin-left: 10px;
+}
+.store{
+    display: flex;
+    align-content: center;
+    align-tracks: center;
+    text-align: center;
+
+}
+.head{
+    text-align: center;
+    padding: 1rem;
+    font-family: Billabong fonts;
+}
+.a{
+    list-style: none;
+    text-decoration: none;
+    color: rgb(74, 120, 204);
+}
+.fb{
+    font-size: 16px;
+    margin-top: 2rem;
+}
+.fgt{
+    font-size: 11px;
+    margin-top: .7rem;
+}
+.form-control{
+    background-color: rgb(250, 248, 250);
+}
+#button{
+    background-color: rgb(100, 163, 245);
+}
