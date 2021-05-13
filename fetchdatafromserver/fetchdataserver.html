@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>fetch users</h1>
+    <button onclick="fetchdata()">fetch all users</button>
+    <div id="result">
+
+    </div>
+</body>
+<script>
+    function populate(datset){
+        let html_val=``;
+        for(let users of dataset){
+            html_val+=`<p>id:${users.id} name:${users.name} username:${users.username}</p>`
+        }
+        document.querySelector("#result").innerHTML=html_val
+        
+        
+    }
+    //XMLHttpRequest (class object)
+    //eg: class person{
+
+    //}
+    //=>var object=new person();
+    function fetchdata() {
+        var request = new XMLHttpRequest();
+        //url
+        request.open("get", "https://jsonplaceholder.typicode.com/users")//("method","url")
+
+        //send this request
+
+        request.send()
+
+        //print the response
+        request.onreadystatechange = () => {
+            if (request.readyState == 4) {//checking for task completed
+                if (request.status > 199 & request.status < 300) {//checking for success
+                    //console.log(request.responseText);
+                    let data = JSON.parse(request.responseText)
+                   populate(data)
+                }
+                else {
+                    alert("failed")
+                }
+            }
+            // else{
+            //     alert("not completed")
+            // }
+        }
+    }
+</script>
+
+</html>

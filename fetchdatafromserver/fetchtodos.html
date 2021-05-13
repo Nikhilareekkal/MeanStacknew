@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LIST ALL TODOS</h1>
+
+    <button onclick="fetchToDos()">fetchtodos</button>
+    <div id="result">
+
+
+    </div>
+</body>
+<script>
+
+function populate(todos){
+  let  html_val=``;
+  for(let todo of todos){
+      html_val+=`<p>todoId:${todo.id} title:${todo.title} status:${todo.completed}</p>`
+  }
+  document.querySelector("#result").innerHTML=html_val
+}
+function fetchToDos(){
+    var request=new XMLHttpRequest();
+    request.open("get","https://jsonplaceholder.typicode.com/todos")
+    request.send()
+    request.onreadystatechange=()=>{
+        if(request.readyState==4){
+            if(request.status>199 & request.status<300){
+                let todos=JSON.parse(request.responseText)
+               let filtertodo=todos.filter(todo=>todo.userId==1)
+               populate(filtertodo)
+
+            }
+            else{
+
+            }
+        }
+    }
+
+
+}
+</script>
+</html>
